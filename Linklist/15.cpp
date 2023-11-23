@@ -1,11 +1,10 @@
-// Created by 颜广 on 2023/11/13.
+// Created by 颜广 on 2023/11/23.
 #include <iostream>
 #include "headfun.cpp"
 using namespace std;
 
 Linklist common(LNode *A, LNode *B){
-    LNode *p = A->next;
-    LNode *q = B->next;
+    LNode *p = A->next, *q = B->next;
     LNode *C = new LNode ;
     LNode *r = C, *s;
     while (p != NULL && q != NULL){
@@ -27,11 +26,11 @@ Linklist common(LNode *A, LNode *B){
 }
 
 int main(){
-    cout << "15、A,B 两个单链表递增有序，从A，B中找出\n"
+    cout << "15、A,B两个单链表递增有序，从A，B中找出\n"
             "公共元素产生单链表C，要求不破环 A，B结点" << endl;
-    cout << "A:";
+    cout << "A:" << endl;
     LNode *A = aaaa();
-    cout << "B:";
+    cout << "B:" << endl;
     LNode *B = aaaa();
     LNode *C = common(A, B);
     LNode *q = C->next;

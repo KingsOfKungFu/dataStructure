@@ -29,8 +29,6 @@ int depth(BTNode *boot){
     return level;
 }
 
-
-
 int main(){
     cout << "27、用层次遍历求解二叉树的高度" << endl;
     BTNode *T = aaaa();

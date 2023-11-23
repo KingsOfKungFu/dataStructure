@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/13.
+// Created by 颜广 on 2023/11/23.
 #include <iostream>
 #include "headfun.cpp"
 using namespace std;
@@ -12,7 +12,7 @@ void fun(LNode *&A, LNode *&B){
             s = p;
             p = p->next;
             s->next = A->next;
-            A->next = s;
+            A->next= s;
         }else{
             s = q;
             q = q->next;
