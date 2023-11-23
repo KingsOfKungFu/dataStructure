@@ -1,12 +1,10 @@
-// Created by 颜广 on 2023/11/16.
+// Created by 颜广 on 2023/11/23.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
 
-int op(char A, char B, char C)
-{
-    switch (C)
-    {
+int op(char A, char B, char C){
+    switch (C) {
         case '+':
             return A + B;
             break;
@@ -29,7 +27,8 @@ int comp(BTNode *p){
     int A, B;
     if(p == NULL){
         return 0;
-    }else{
+    }
+    if(p != NULL){
         if(p->lchild != NULL && p->rchild != NULL){
             A = comp(p->lchild);
             B = comp(p->rchild);
@@ -44,19 +43,19 @@ void func(BTNode *p, int deep){
     if(p != NULL){
         if((p->lchild && p->rchild) && deep >= 1){
             cout << '(';
-            func(p->lchild,deep + 1);
-            cout << p->data;
-            func(p->rchild, deep + 1);
-            if((p->lchild && p->rchild) && deep >= 1){
-                cout << ')';
-            }
+        }
+        func(p->lchild,deep+1);
+        cout << p->data;
+        func(p->rchild,deep+1);
+        if((p->lchild && p->rchild) && deep >= 1){
+            cout << ')';
         }
     }
 }
 
 
 int main(){
-    cout << "5、 (a-(b+c))*(d/e)存储在二叉树，遍历求值" << endl;
+    cout << "5、(a-(b+c))*(d/e)存储在二叉树，遍历求值" << endl;
     BTNode *T = aaaa();
     int deep=0;
     cout<<"result1:";
