@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/21.
+// Created by 颜广 on 2023/11/23.
 #include <iostream>
 #include "018treefun.cpp"
 using namespace std;
@@ -18,6 +18,7 @@ void allpath(BTNode *p){
         allpath(p->rchild);
     }
 }
+
 
 int main(){
     cout << "18、增加一个指向双亲节点的 parent 指针，\n"

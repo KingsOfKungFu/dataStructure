@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/22.
+// Created by 颜广 on 2023/11/23.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -20,7 +20,7 @@ BiTree Nonpost(BTNode *bt, BTNode *p, BTNode *q){
                 bt = St[top--];
                 if(bt == p){
                     int temp = top;
-                    while(temp != -1){
+                    while (temp != -1){
                         s1[++top1] = St[temp--];
                     }
                 }
@@ -49,6 +49,7 @@ int main(){
     cout << "23、找到p和q最近公共祖先结点r" << endl;
     BTNode *T = aaaa();
     printTree(T,0);
+    cout << endl;
     BTNode *p = T->lchild->lchild;
     BTNode *q = T->lchild->rchild->rchild;
     cout << Nonpost(T, p, q)->data;
