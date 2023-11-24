@@ -81,6 +81,9 @@ add_executable(dataStructure_Main_BiTree_24 BiTree/24.cpp)
 add_executable(dataStructure_Main_BiTree_25 BiTree/25.cpp)
 add_executable(dataStructure_Main_BiTree_26 BiTree/26.cpp)
 add_executable(dataStructure_Main_BiTree_27 BiTree/27.cpp)
+add_executable(dataStructure_Main_BiTree_28 BiTree/28.cpp)
+add_executable(dataStructure_Main_BiTree_29 BiTree/29.cpp)
+add_executable(dataStructure_Main_BiTree_30 BiTree/30.cpp)
 
 #查找
 add_executable(dataStructure_Main_search_1 search/1.cpp)
