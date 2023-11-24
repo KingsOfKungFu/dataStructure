@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/23.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -14,12 +14,12 @@ void LevelWidth(BiTree T, int a[], int h){
 
 int width(BiTree T){
     int a[maxsize], h = 1;
-    for (int i = 0; i < maxsize; i++) {
+    for (int i = 0; i < maxsize; ++i) {
         a[i] = 0;
     }
     LevelWidth(T,a,h);
     int wid = a[0];
-    for (int i = 1; i < maxsize; i++) {
+    for (int i = 0; i < maxsize; ++i) {
         if(a[i] > wid){
             wid = a[i];
         }
@@ -27,7 +27,7 @@ int width(BiTree T){
     return wid;
 }
 
-typedef struct{
+typedef struct {
     BTNode *p;
     int lno;
 } St[maxsize];
@@ -39,7 +39,7 @@ int width2(BTNode *boot){
     if(boot != NULL){
         que[++rear].p = boot;
         que[rear].lno = 1;
-        while(front != rear){
+        while (front != rear){
             BTNode *q = que[++front].p;
             Lno = que[front].lno;
             if(q->lchild != NULL){
@@ -69,7 +69,7 @@ int width2(BTNode *boot){
 int main(){
     cout << "26、求解二叉树的宽度" << endl;
     BTNode *T = aaaa();
-    printTree(T,0);
-    cout << "宽度为:" << width(T) << endl;
+    cout << "方法一宽度为:" << width(T) << endl;
+    cout << "方法二宽度为:" << width2(T) << endl;
     return 0;
 }

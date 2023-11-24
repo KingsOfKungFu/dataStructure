@@ -1,16 +1,15 @@
-// Created by 颜广 on 2023/11/17.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
 
 void swap(BTNode *p){
     if(p != NULL){
-        BTNode *temp = new BTNode ;
-        temp = p->lchild;
-        p->lchild = p->rchild;
-        p->rchild = temp;
         swap(p->lchild);
         swap(p->rchild);
+        BTNode *temp = p->lchild;
+        p->lchild = p->rchild;
+        p->rchild = temp;
     }
 }
 
@@ -19,6 +18,7 @@ int main(){
     BTNode *T = aaaa();
     printTree(T,0);
     swap(T);
+    cout << "交换后：" << endl;
     printTree(T,0);
     return 0;
 }

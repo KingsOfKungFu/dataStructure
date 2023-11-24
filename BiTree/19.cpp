@@ -1,45 +1,49 @@
-// Created by 颜广 on 2023/11/22.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
 #define maxsize 50
 
 void Nonpre(BTNode *bt){
-    BTNode *stack[maxsize];
+    BTNode *Stack[maxsize];
     int top = -1;
     if(bt != NULL){
-        stack[++top] = bt;
+        Stack[++top] = bt;
         while (top != -1){
-            bt = stack[--top];
+            bt = Stack[top--];
             cout << bt->data;
             if(bt->rchild != NULL){
-                stack[++top] = bt->rchild;
+                Stack[++top] = bt->rchild;
             }
             if(bt->lchild != NULL){
-                stack[++top] = bt->lchild;
+                Stack[++top] = bt->lchild;
             }
         }
     }
 }
 
 void Nonpre2(BTNode *bt){
-    BTNode *stack[maxsize];
+    BTNode *Stack[maxsize];
     int top = -1;
     while (bt || top != -1){
         if(bt != NULL){
             cout << bt->data;
-            stack[++top] = bt;
+            Stack[++top] = bt;
             bt = bt->lchild;
         }else{
-            bt = stack[top--];
+            bt = Stack[top--];
             bt = bt->rchild;
         }
     }
 }
 
+
 int main(){
     cout << "19、先序非递归遍历二叉树" << endl;
     BTNode *T = aaaa();
+    cout << "方法一:";
+    Nonpre(T);
+    cout << "\n方法二:";
     Nonpre2(T);
     return 0;
 }

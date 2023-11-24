@@ -1,15 +1,15 @@
-// Created by 颜广 on 2023/11/17.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
 
-bool fun(BTNode *T1, BTNode *T2){
-    int left, right; // 有1必须有0！！！有出口有结果
+int fun(BTNode *T1, BTNode *T2){
+    int left, right;
     if(T1 == NULL && T2 == NULL){
-        return true;
+        return 1;
     }
-    if(T1 == NULL || T2 == NULL){
-        return false;
+    if(T1 == NULL && T2 == NULL){
+        return 0;
     }else{
         left = fun(T1->lchild,T2->lchild);
         right = fun(T1->rchild,T2->rchild);

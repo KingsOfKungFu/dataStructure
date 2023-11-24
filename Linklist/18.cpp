@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/14.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "headfun.cpp"
 using namespace std;
@@ -8,7 +8,7 @@ int find(LNode *head, int k){
     LNode *p = head;
     int i = 1;
     while (q != NULL){
-        q  = q->next;
+        q = q->next;
         ++i;
         if(i > k){
             p = p->next;
@@ -16,9 +16,10 @@ int find(LNode *head, int k){
     }
     if(p == head){
         return 0;
+    }else{
+        cout << "倒数第K个节点为：" << p->data;
+        return 1;
     }
-    cout << "倒数第K个节点为：" << p->data;
-    return 1;
 }
 
 int main(){

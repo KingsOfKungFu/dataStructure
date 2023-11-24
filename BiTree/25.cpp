@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/23.
+// Created by 颜广 on 2023/11/24.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -30,7 +30,6 @@ void level(BTNode *p){
 int main(){
     cout << "25、试给出自下而上从右到左的层次遍历" << endl;
     BTNode *T = aaaa();
-    printTree(T,0);
     level(T);
     return 0;
 }
