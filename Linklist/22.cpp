@@ -1,10 +1,10 @@
-// Created by 颜广 on 2023/11/15.
+// Created by 颜广 on 2023/11/25.
 #include <iostream>
 #include "circlesinglefun.cpp"
 using namespace std;
 
 void del(LNode *&L){
-    LNode *minp, *p, *u;
+    LNode *p, *minp, *u;
     while (L->next != L){
         p = L->next;
         minp = L;
@@ -14,7 +14,7 @@ void del(LNode *&L){
             }
             p = p->next;
         }
-        cout << "依次输出为：";
+        cout << "依次输出位：";
         cout << minp->next->data << endl;
         u = minp->next;
         minp->next = u->next;
@@ -28,6 +28,7 @@ int main(){
             "为正整数，设计算法反复找出链表内最小值并不\n"
             "断输出，并将结点从链表中删除，直到链表为空，\n"
             "再删除表头结点" << endl;
+    cout << "输入A链表：" << endl;
     LNode *A = aaaa();
     del(A);
     return 0;

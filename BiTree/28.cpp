@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/24.
+// Created by 颜广 on 2023/11/25.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -31,7 +31,6 @@ bool fun(BTNode *p){
 int main(){
     cout << "28、判断二叉树是否为完全二叉树" << endl;
     BTNode *T = aaaa();
-    printTree(T,0);
     if (fun(T))
         cout << "是完全二叉树!";
     else

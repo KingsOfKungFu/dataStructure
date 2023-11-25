@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/23.
+// Created by 颜广 on 2023/11/25.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 void Nonpost(BTNode *bt, char x){
     BTNode *St[maxsize], *tag = NULL;
     int top = -1;
-    while(bt || top != -1){
+    while (bt || top != -1){
         if(bt != NULL){
             St[++top] = bt;
             bt = bt->lchild;
@@ -29,11 +29,11 @@ void Nonpost(BTNode *bt, char x){
     }
 }
 
+
 int main(){
     cout << "22、在二叉树中查找值为x的结点，打印出值\n"
-            "为x的所有祖先" << endl;
+            "为x 的所有祖先" << endl;
     BTNode *T = aaaa();
-    printTree(T,0);
     Nonpost(T, '5');
     return 0;
 }

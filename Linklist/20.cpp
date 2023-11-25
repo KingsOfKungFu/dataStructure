@@ -1,16 +1,18 @@
-// Created by 颜广 on 2023/11/15.
+// Created by 颜广 on 2023/11/25.
 #include <iostream>
 #include "circledoublefun.cpp"
 using namespace std;
 
 int fun(DNode *L){
-    DNode *p = L->next, *q = L->prior;
-    while (p->next != q && p != q){
-        if(p->data != q->data){
+    DNode *p = L->next;
+    DNode *q = L->prior;
+    while (p != q && q->next != p){
+        if(p->data == q->data){
+            p = p->next;
+            q = q->prior;
+        }else{
             return 0;
         }
-        p = p->next;
-        q = q->prior;
     }
     return 1;
 }
