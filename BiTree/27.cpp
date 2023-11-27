@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/24.
+// Created by 颜广 on 2023/11/27.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -13,7 +13,7 @@ int depth(BTNode *boot){
     BTNode *q[maxsize];
     q[++rear] = boot;
     BTNode *p;
-    while (front < rear){
+    while(front < rear){
         p = q[++front];
         if(p->lchild){
             q[++rear] = p->lchild;
@@ -32,6 +32,7 @@ int depth(BTNode *boot){
 int main(){
     cout << "27、用层次遍历求解二叉树的高度" << endl;
     BTNode *T = aaaa();
-    cout << "二叉树的高度:" << depth(T) << endl;
+    printTree(T,0);
+    cout << "高度:" << depth(T) << endl;
     return 0;
 }

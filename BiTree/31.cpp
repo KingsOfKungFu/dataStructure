@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/25.
+// Created by 颜广 on 2023/11/27.
 #include <iostream>
 using namespace std;
 
@@ -10,8 +10,8 @@ typedef struct TNode{
 
 void InTh(TNode *&p, TNode *&pre){
     if(p != NULL){
-        InTh(p->lchild,pre);
-        if(p->lchild == NULL){
+        InTh(p->lchild, pre);
+        if(p->lchild,pre){
             p->lchild = pre;
             p->ltag = 1;
         }
@@ -20,7 +20,7 @@ void InTh(TNode *&p, TNode *&pre){
             pre->rtag = 1;
         }
         pre = p;
-        InTh(p->rchild,pre);
+        InTh(p->rchild, pre);
     }
 }
 

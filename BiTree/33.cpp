@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/25.
+// Created by 颜广 on 2023/11/27.
 #include <iostream>
 #include "033fun.cpp"
 using namespace std;
@@ -11,7 +11,7 @@ TNode *Next(TNode *p){
 }
 
 void qq(TNode *p){
-    for(TNode *q = p; q != NULL; q = Next(q)){
+    for (TNode *q = p; q != NULL; q = Next(q)) {
         cout << q->data << " ";
     }
 }
@@ -21,9 +21,9 @@ int main(){
     TNode *T = aa();
     TNode *pre = NULL;
     if(T != NULL){
-        preTh(T,pre);
+        preTh(T, pre);
         pre->rchild = NULL;
-        pre->rtag - 1;
+        pre->rtag = 1;
     }
     qq(T);
     return 0;

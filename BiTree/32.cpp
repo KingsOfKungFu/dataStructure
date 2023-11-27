@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/25.
+// Created by 颜广 on 2023/11/27.
 #include <iostream>
 #include "31.cpp"
 using namespace std;
@@ -29,8 +29,8 @@ int main(){
     cout << "32、中序遍历线索二叉树" << endl;
     TNode *T = aa();
     TNode *pre = NULL;
-    if (T != NULL){
-        InTh(T, pre);
+    if(T != NULL){
+        InTh(T,pre);
         pre->rchild = NULL;
         pre->rtag = 1;
     }

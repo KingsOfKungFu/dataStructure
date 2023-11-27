@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/22.
+// Created by 颜广 on 2023/11/27.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -15,7 +15,7 @@ void link(BTNode *p, BTNode *&head, BTNode *&tail){
             }
         }
         link(p->lchild,head,tail);
-        link(p->rchild,head,tail);
+        link(p->lchild,head,tail);
     }
 }
 
@@ -25,7 +25,7 @@ int main(){
             "一个，tail 指向最后一个）" << endl;
     BTNode *T = aaaa();
     BTNode *head = NULL, *tail = NULL;
-    link(T, head, tail);
+    link(T,head,tail);
     while (head != NULL){
         cout << head->data << " ";
         head = head->rchild;
