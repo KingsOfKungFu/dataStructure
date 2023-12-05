@@ -1,37 +1,38 @@
-// Created by 颜广 on 2023/11/17.
+// Created by 颜广 on 2023/11/28.
 #include <iostream>
 #include "stackfun.cpp"
 using namespace std;
 
 bool fun(Stack &s, string str){
     int i = 0;
-    while (str[i] != '\0')
-    {
-        switch (str[i])
-        {
+    while (str[i] != '\0'){
+        switch (str[i]) {
             case '(':
-                push(s, '(');
+                push(s,'(');
                 break;
             case '{':
-                push(s, '{');
+                push(s,'{');
                 break;
             case ')':
-                if (pop(s) != '(')
+                if(pop(s) != '('){
                     return false;
+                }
                 break;
             case '}':
-                if (pop(s) != '{')
+                if(pop(s) != '{'){
                     return false;
+                }
                 break;
             default:
                 break;
         }
         ++i;
     }
-    if (s.top == -1)
+    if(s.top == -1){
         return true;
-    else
+    }else{
         return false;
+    }
 }
 
 int main(){
@@ -48,4 +49,3 @@ int main(){
         cout << "括号不匹配!" << endl;
     return 0;
 }
-

@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/17.
+// Created by 颜广 on 2023/11/28.
 #include <iostream>
 #include "headfun.cpp"
 #include "stackfun.cpp"
@@ -14,7 +14,7 @@ int fun(LNode *L){
         p = p->next;
     }
     p = L->next;
-    for (j = 0; j < n / 2; ++j) {
+    for (j = 0; j < n/2; ++j) {
         push(s,p->data);
         p = p->next;
     }
@@ -32,9 +32,8 @@ int fun(LNode *L){
 }
 
 int main(){
-    cout << "" << endl;
+    cout << "2、判断单链表的全部n个字符是否中心对称" << endl;
     LNode *L = aaaa();
     cout << fun(L) << endl;
     return 0;
 }
-

@@ -1,8 +1,7 @@
-// Created by 颜广 on 2023/11/27.
+// Created by 颜广 on 2023/12/5.
 #include <iostream>
 #include "31.cpp"
 using namespace std;
-#define maxsize 50
 
 TNode *fun(TNode *T, TNode *p){
     if(p->ltag == 0){
@@ -20,11 +19,11 @@ int main(){
     TNode *T = aa();
     TNode *p = T->rchild->lchild;
     TNode *pre = NULL;
-    if(T != NULL){
-        InTh(T,pre);
+    if (T != NULL){
+        InTh(T, pre);
         pre->rchild = NULL;
         pre->rtag = 1;
     }
-    cout << "pre is :" << fun(T,p)->data << endl;
+    cout << "pre is:" << fun(T, p)->data << endl;
     return 0;
 }

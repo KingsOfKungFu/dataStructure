@@ -1,8 +1,7 @@
-// Created by 颜广 on 2023/11/27.
+// Created by 颜广 on 2023/12/5.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
-#define maxsize 50
 
 void fun(BTNode *T, int n, int &max){
     if(max < n){
@@ -21,7 +20,7 @@ int main(){
     int n = 1;
     int max = 0;
     BTNode *T = aaaa();
-    fun(T,n,max);
+    fun(T, n, max);
     cout << max << endl;
     return 0;
 }

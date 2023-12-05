@@ -1,8 +1,7 @@
-// Created by 颜广 on 2023/11/27.
+// Created by 颜广 on 2023/12/5.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
-#define maxsize 50
 
 int fun(BTNode *p){
     if(p == NULL){
@@ -17,6 +16,6 @@ int fun(BTNode *p){
 int main(){
     cout << "35、用孩子兄弟表示法求树所有叶子结点个数" << endl;
     BTNode *T = aaaa();
-    cout << "叶子结点个数为：" << fun(T);
+    cout << "叶子节点个数为:" << fun(T);
     return 0;
 }
