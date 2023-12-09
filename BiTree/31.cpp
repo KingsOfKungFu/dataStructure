@@ -1,8 +1,8 @@
-// Created by 颜广 on 2023/11/27.
+// Created by 颜广 on 2023/12/9.
 #include <iostream>
 using namespace std;
 
-typedef struct TNode{
+typedef struct TNode {
     char data;
     struct TNode *lchild, *rchild;
     int ltag = 0, rtag = 0;
@@ -10,8 +10,8 @@ typedef struct TNode{
 
 void InTh(TNode *&p, TNode *&pre){
     if(p != NULL){
-        InTh(p->lchild, pre);
-        if(p->lchild,pre){
+        InTh(p->lchild,pre);
+        if(p->lchild == NULL){
             p->lchild = pre;
             p->ltag = 1;
         }
@@ -20,13 +20,13 @@ void InTh(TNode *&p, TNode *&pre){
             pre->rtag = 1;
         }
         pre = p;
-        InTh(p->rchild, pre);
+        InTh(p->rchild,pre);
     }
 }
 
 iTree aa(){
     char x;
-    cout << "请输入(0结束):";
+    cout << "请输入:";
     cin >> x;
     if(x != '0'){
         TNode *T = new TNode ;

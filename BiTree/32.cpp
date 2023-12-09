@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/27.
+// Created by 颜广 on 2023/12/9.
 #include <iostream>
 #include "31.cpp"
 using namespace std;
@@ -20,7 +20,7 @@ TNode *Next(TNode *p){
 
 void In(TNode *p){
     TNode *q = First(p);
-    for (; q != NULL; q = Next(q)) {
+    for (; q != NULL ; q = Next(q)) {
         cout << q->data << " ";
     }
 }
@@ -30,7 +30,7 @@ int main(){
     TNode *T = aa();
     TNode *pre = NULL;
     if(T != NULL){
-        InTh(T,pre);
+        InTh(T, pre);
         pre->rchild = NULL;
         pre->rtag = 1;
     }

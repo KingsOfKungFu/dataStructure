@@ -1,4 +1,4 @@
-// Created by 颜广 on 2023/11/24.
+// Created by 颜广 on 2023/12/9.
 #include <iostream>
 #include "BiTreefun.cpp"
 using namespace std;
@@ -37,13 +37,12 @@ void Nonpre2(BTNode *bt){
     }
 }
 
-
 int main(){
     cout << "19、先序非递归遍历二叉树" << endl;
     BTNode *T = aaaa();
-    cout << "方法一:";
+    printTree(T,0);
     Nonpre(T);
-    cout << "\n方法二:";
+    cout << endl;
     Nonpre2(T);
     return 0;
 }
